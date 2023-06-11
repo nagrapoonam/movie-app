@@ -1,0 +1,76 @@
+{
+    "titanic": {
+        "year": "1997",
+        "rating": "7.9",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+        "notes": "award winning movie"
+    },
+    "batman": {
+        "year": "1989",
+        "rating": "7.5",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BZDNjOGNhN2UtNmNhMC00YjU4LWEzMmUtNzRkM2RjN2RiMjc5XkEyXkFqcGdeQXVyMTU0OTM5ODc1._V1_SX300.jpg",
+        "notes": "Super hero movie"
+    },
+    "Motion Detected": {
+        "year": "2021",
+        "rating": "N/A",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BNmNmNzUwMDgtMDFiZS00MzRmLWFlNGQtMjY2ZGUyOTYxY2Y2XkEyXkFqcGdeQXVyMTEyMDc4Nzk2._V1_SX300.jpg"
+    },
+    "The Bear": {
+        "year": "2022\u2013",
+        "rating": "8.4",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BY2NmZjkxYmMtYzEwZS00NDg0LTkwNDUtOWNjNGZiZjgxODA4XkEyXkFqcGdeQXVyNjc5NjEzNA@@._V1_SX300.jpg"
+    },
+    "Ginormo": {
+        "year": "2023\u2013",
+        "rating": "N/A",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BZGM1ZDM3MjktZjQxYy00M2IwLTk3YTItMWM1MjFmMjkzYzU0XkEyXkFqcGdeQXVyMTM1ODY5NzMy._V1_SX300.jpg"
+    },
+    "Fast X": {
+        "year": "2023",
+        "rating": "N/A",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BNzZmOTU1ZTEtYzVhNi00NzQxLWI5ZjAtNWNhNjEwY2E3YmZjXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg"
+    },
+    "Citadel": {
+        "year": "2012",
+        "rating": "5.7",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BMzIwMTQ2NTAyM15BMl5BanBnXkFtZTcwNDIzMjQ0OA@@._V1_SX300.jpg",
+        "notes": "Good Series"
+    },
+    "Rehearsal": {
+        "year": "2015",
+        "rating": "5.7",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BMmViYjUyMjEtY2VmOS00OTlmLWJlNDUtMDhiNzFmNGVlMDMzXkEyXkFqcGdeQXVyNzE4MjE0MA@@._V1_SX300.jpg"
+    },
+    "The Mother": {
+        "year": "2003",
+        "rating": "6.7",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BMTM4Mzk4ODU1Ml5BMl5BanBnXkFtZTcwMzkxOTUyMQ@@._V1_SX300.jpg"
+    },
+    "Air": {
+        "year": "2023",
+        "rating": "7.7",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BYmNlOTNlYjUtM2U3Yy00M2ZjLTkxZDQtN2NiNGZiZDI0ZjE3XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg"
+    },
+    "The Dark Knight": {
+        "year": "2008",
+        "rating": "9.0",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
+    },
+    "The Little Mermaid": {
+        "year": "1989",
+        "rating": "7.6",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BOWUyNDA0ZmItMzg2My00YjJhLTk1N2QtYTAxYTc0NzMzNDI0XkEyXkFqcGdeQXVyMTI5NzUyMTIz._V1_SX300.jpg"
+    },
+    "Yellowstone": {
+        "year": "2018\u20132023",
+        "rating": "9.2",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BOGFiZjU5NGEtNTAwNS00ZjI2LTg0YTktNjg0ODFlM2E0NGVhXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg",
+        "notes": "ok movie"
+    },
+    "The Godfather": {
+        "year": "1972",
+        "rating": "9.2",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "The Boogeyman": {
+        "year": "2023",
+        "rating": "6.2",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BNzNkYmE1NDYtMmI4Mi00YjU2LTkxZDEtMWI0ZDE4MTczZDRjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"
+    },
+    "Transformers": {
+        "year": "2007",
+        "rating": "7.0",
+        "poster_image_url": "https://m.media-amazon.com/images/M/MV5BNWI1NjkxM2MtOTU4My00YzQ5LTliNGMtNmFlM2U5NWM3MDY1XkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg"
+    }
+}
