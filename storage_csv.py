@@ -1,12 +1,14 @@
 import csv
 from pathlib import Path
+
 from istorage import IStorage
 
-class StorageCsv(IStorage): #implements the IStorage interface for JSON storage
+
+class StorageCsv(IStorage):  # implements the IStorage interface for JSON storage
     def __init__(self, file_path):
         self.file_path = file_path
 
-    def list_movies(self): # method reads the CSV data from the file
+    def list_movies(self):  # method reads the CSV data from the file
         movies = {}
         with open(self.file_path, "r") as csv_file:
             reader = csv.DictReader(csv_file)
@@ -22,7 +24,7 @@ class StorageCsv(IStorage): #implements the IStorage interface for JSON storage
                 }
         return movies
 
-    def add_movie(self, title, year, rating, poster): #adds a new movie to the CSV data
+    def add_movie(self, title, year, rating, poster):  # adds a new movie to the CSV data
         header = ["title", "year", "rating", "poster"]
         movie_data = [title, year, rating, poster]
 
@@ -38,7 +40,7 @@ class StorageCsv(IStorage): #implements the IStorage interface for JSON storage
 
         print("Movie data stored in Csv File")
 
-    def delete_movie(self, title): #removes a movie from the CSV data
+    def delete_movie(self, title):  # removes a movie from the CSV data
         movies = self.list_movies()
         if title in movies:
             with open(self.file_path, "w", newline="") as csv_file:
@@ -46,12 +48,13 @@ class StorageCsv(IStorage): #implements the IStorage interface for JSON storage
                 writer.writerow(["title", "year", "rating", "poster"])
                 for movie_title, movie_info in movies.items():
                     if movie_title != title:
-                        writer.writerow([movie_title, movie_info["year"], movie_info["rating"], movie_info["poster_image_url"]])
+                        writer.writerow(
+                            [movie_title, movie_info["year"], movie_info["rating"], movie_info["poster_image_url"]])
             print(f"Movie '{title}' deleted.")
         else:
             print(f"Movie '{title}' not found.")
 
-    def update_movie(self, title, rating, notes): #method updates the rating and notes of a movie in the csv data
+    def update_movie(self, title, rating, notes):  # method updates the rating and notes of a movie in the csv data
         movies = self.list_movies()
         if title in movies:
             movies[title]["rating"] = rating
@@ -60,7 +63,8 @@ class StorageCsv(IStorage): #implements the IStorage interface for JSON storage
                 writer = csv.writer(csv_file)
                 writer.writerow(["title", "year", "rating", "poster"])
                 for movie_title, movie_info in movies.items():
-                    writer.writerow([movie_title, movie_info["year"], movie_info["rating"], movie_info["poster_image_url"]])
+                    writer.writerow(
+                        [movie_title, movie_info["year"], movie_info["rating"], movie_info["poster_image_url"]])
             print(f"Movie '{title}' successfully updated.")
         else:
             print(f"Movie '{title}' not found.")

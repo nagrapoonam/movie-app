@@ -1,19 +1,19 @@
-import requests
-import json
 import random
-import csv
-from colorama import Fore, Back, Style #allows to add colors to the console output
 
-class MovieApp: #handles the user interface and commands for the movie application
+import requests
+from colorama import Fore, Style  # allows to add colors to the console output
+
+
+class MovieApp:  # handles the user interface and commands for the movie application
     def __init__(self, storage):
         self._storage = storage
 
-    def _command_list_movies(self): #list the movies
+    def _command_list_movies(self):  # list the movies
         movies = self._storage.list_movies()
         print(f"list of movies : \n {movies}")
         # print(Fore.BLUE + f"List of movies: \n {Fore.YELLOW}{json.dumps(movies, indent=4)}" + Style.RESET_ALL)
 
-    def _command_add_movie(self): #adding the movies
+    def _command_add_movie(self):  # adding the movies
         title = input("Enter the movie title: ")
         api_url = f"http://www.omdbapi.com/?apikey=4bf81bd7&t={title}"
 
@@ -30,19 +30,17 @@ class MovieApp: #handles the user interface and commands for the movie applicati
 
         self._storage.add_movie(title, year, rating, poster)
 
-
-    def _command_delete_movie(self): #deleting the movies
+    def _command_delete_movie(self):  # deleting the movies
         title = input("Enter the movie title to delete: ")
         self._storage.delete_movie(title)
 
-
-    def _command_update_movie(self): #update movie with new rating and notes
+    def _command_update_movie(self):  # update movie with new rating and notes
         title = input("Enter the movie title: ")
         rating = input("Enter the new rating: ")
         notes = input("Enter movie notes: ")
         self._storage.update_movie(title, rating, notes)
 
-    def _command_movie_stats(self): #generating and displaying statistics
+    def _command_movie_stats(self):  # generating and displaying statistics
         movies = self._storage.list_movies()
 
         rated_movies = [movie for movie in movies.values() if movie["rating"] != 'N/A']
@@ -75,7 +73,7 @@ class MovieApp: #handles the user interface and commands for the movie applicati
         else:
             print(Fore.YELLOW + "No rated movies found." + Style.RESET_ALL)
 
-    def _command_random_movie(self): #displaying random movie
+    def _command_random_movie(self):  # displaying random movie
         movies = self._storage.list_movies()
 
         if not movies:
@@ -86,7 +84,7 @@ class MovieApp: #handles the user interface and commands for the movie applicati
         rating = movies[random_movie]['rating']
         print(Fore.BLUE + f"Random movie: {random_movie} (Rating: {rating})" + Style.RESET_ALL)
 
-    def _command_search_movie(self): #search movies as per user requirement
+    def _command_search_movie(self):  # search movies as per user requirement
         movies = self._storage.list_movies()
 
         movie_to_search = input(Fore.BLUE + "Enter part of movie name: " + Style.RESET_ALL).lower()
@@ -103,7 +101,7 @@ class MovieApp: #handles the user interface and commands for the movie applicati
         else:
             print(Fore.RED + "No matches found." + Style.RESET_ALL)
 
-    def _command_movies_by_rating(self): #sort movies by rating
+    def _command_movies_by_rating(self):  # sort movies by rating
         movies = self._storage.list_movies()
 
         # Sort the movies by rating in descending order
@@ -114,7 +112,7 @@ class MovieApp: #handles the user interface and commands for the movie applicati
         for name, details in sorted_movies:
             print(Fore.YELLOW + f"{name}, {details['rating']}" + Style.RESET_ALL)
 
-    def _command_generate_website(self): #generate website
+    def _command_generate_website(self):  # generate website
         movies_data = self._storage.list_movies()
 
         movie_grid = ''
@@ -146,10 +144,10 @@ class MovieApp: #handles the user interface and commands for the movie applicati
 
         print(Fore.LIGHTGREEN_EX + "Website generated successfully!" + Style.RESET_ALL)
 
-    def run(self): #runs movie application
+    def run(self):  # runs movie application
         while True:
-            print(Fore.MAGENTA  + "\n********** My Movies Database **********\n")
-            print(Fore.CYAN  + "Menu:")
+            print(Fore.MAGENTA + "\n********** My Movies Database **********\n")
+            print(Fore.CYAN + "Menu:")
             print("0. Exit")
             print("1. List movies")
             print("2. Add movie")

@@ -1,17 +1,18 @@
-from istorage import IStorage
 import json
 
+from istorage import IStorage
 
-class StorageJson(IStorage): #implements the IStorage interface for JSON storage
+
+class StorageJson(IStorage):  # implements the IStorage interface for JSON storage
     def __init__(self, file_path):
         self.file_path = file_path
 
-    def list_movies(self): # method reads the JSON data from the file
+    def list_movies(self):  # method reads the JSON data from the file
         with open(self.file_path, "r") as json_file:
             data = json.load(json_file)
         return data
 
-    def add_movie(self, title, year, rating, poster): #adds a new movie to the JSON data
+    def add_movie(self, title, year, rating, poster):  # adds a new movie to the JSON data
         existing_data = {}
         with open(self.file_path, "r") as json_file:
             existing_data = json.load(json_file)
@@ -31,7 +32,7 @@ class StorageJson(IStorage): #implements the IStorage interface for JSON storage
 
             print("Movie data stored in Json File")
 
-    def delete_movie(self, title): #removes a movie from the JSON data
+    def delete_movie(self, title):  # removes a movie from the JSON data
         with open(self.file_path, "r") as json_file:
             data = json.load(json_file)
 
@@ -44,7 +45,7 @@ class StorageJson(IStorage): #implements the IStorage interface for JSON storage
         else:
             print(f"Movie '{title}' not found.")
 
-    def update_movie(self, title, rating, notes): #method updates the rating and notes of a movie in the JSON data
+    def update_movie(self, title, rating, notes):  # method updates the rating and notes of a movie in the JSON data
         with open(self.file_path, "r") as json_file:
             data = json.load(json_file)
 
